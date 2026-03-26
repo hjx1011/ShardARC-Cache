@@ -1,0 +1,5 @@
+build/
+.vscode/
+*.o
+my_server
+kamacache_server

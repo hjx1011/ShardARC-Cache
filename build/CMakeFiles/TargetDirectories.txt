@@ -1,3 +1,0 @@
-/home/hjx/projects/KamaCache/build/CMakeFiles/my_server.dir
-/home/hjx/projects/KamaCache/build/CMakeFiles/edit_cache.dir
-/home/hjx/projects/KamaCache/build/CMakeFiles/rebuild_cache.dir
