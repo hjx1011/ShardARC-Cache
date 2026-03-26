@@ -28,3 +28,27 @@
 ├── test/                 # 并发压测模块
 ├── third_party/          # 第三方库 (httplib.h)
 └── LICENSE               # MIT 许可证
+🚀 快速开始
+编译构建
+code
+Bash
+mkdir build && cd build
+cmake ..
+make
+运行服务
+code
+Bashgit status
+./kamacache_server
+网络接口调用
+code
+Bash
+# 写入数据 (10s 过期)
+curl -X POST "http://localhost:8080/put?key=name&val=Kama&ttl=10"
+
+# 读取数据
+curl "http://localhost:8080/get?key=name"
+📈 性能测试
+在 10 线程并发压测环境下，单全局锁版本与分段锁版本的耗时对比：
+架构类型	10w 次读写耗时	并发表现
+单全局锁	~1200ms	锁争用严重，多核利用率低
+ShardARC (16分片)	~350ms	锁竞争极小，高并发吞吐能力极强
