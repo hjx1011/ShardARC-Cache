@@ -4,7 +4,6 @@
 
 using namespace httplib;
 
-// 注意：这里不是 main，而是 start_http_server！
 void start_http_server(HighAvailableCacheManager* manager) {
     Server svr;
     std::cout << "\n============== 阶段二：启动 KamaCache 分布式服务器 ==============\n";

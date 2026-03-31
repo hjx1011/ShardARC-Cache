@@ -22,9 +22,9 @@ private:
     };
 
     // T1: 最近访问区 
-    // T2: 频繁访问区 
-    // B1: T1 的淘汰历史 
-    // B2: T2 的淘汰历史 
+    // T2: 频繁访问区
+    // B1: T1 的淘汰历史
+    // B2: T2 的淘汰历史
     std::list<K> T1, T2 ,B1, B2;
     std::unordered_map<K,Node> map;
     int c;
